@@ -30,7 +30,7 @@ def validate_general_string(string):
     return string.replace("\"", "\\\"")
 
 
-default_card = open(r"ROUNDS/Assets/DefaultCardClass.txt", "r").read()
+default_card = open(r"Assets/DefaultCardClass.txt", "r").read()
 
 
 class Stat(Enum):
@@ -94,11 +94,11 @@ class Card:
                 .replace("+ACTIONS+", self.generate_actions()))
 
 
-default_main = open(r"ROUNDS/Assets/DefaultMainClass.txt", "r").read()
+default_main = open(r"Assets/DefaultMainClass.txt", "r").read()
 
 lib_dir = r"../lib"
 
-icon_dir = r"ROUNDS/Assets/default_icon.png"
+icon_dir = r"Assets/default_icon.png"
 
 
 class Mod:
@@ -127,20 +127,20 @@ class Mod:
     def write(self):
         open(f"{self.name}.cs", "w").write(f"{self.__str__()}\n\n{self.generate_cards()}")
         open(f"{self.name}.csproj", "w").write(
-            open("ROUNDS/Assets/DefaultCsprojFile.txt", "r").read().replace("+LIB_DIR+", lib_dir))
+            open("Assets/DefaultCsprojFile.txt", "r").read().replace("+LIB_DIR+", lib_dir))
 
     def package(self):
         os.mkdir("BUILD")
         subprocess.run(["dotnet", "build"])
         shutil.move(f"bin/Debug/netstandard2.1/{self.name}.dll", f"BUILD/{validate_class_name(self.name)}.dll")
         open("BUILD/manifest.json", "w").write(
-            open("ROUNDS/Assets/DefaultManifest.txt", "r").read()
+            open("Assets/DefaultManifest.txt", "r").read()
             .replace("+MODNAME+", validate_class_name(self.name))
             .replace("+VERSION+", self.version if use_regex(self.version) else "1.0.0")
             .replace("+DESC+", validate_general_string(self.description))
         )
         open("BUILD/README.md", "w").write(f"# {self.name}\n\n{self.description}")
-        shutil.copy(icon_dir if icon_dir else "ROUNDS/Assets/default_icon.png", "BUILD/icon.png")
+        shutil.copy(icon_dir if icon_dir else "Assets/default_icon.png", "BUILD/icon.png")
         shutil.make_archive(self.name, "zip", "BUILD")
 
     def clean(self):
