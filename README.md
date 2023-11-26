@@ -16,6 +16,8 @@ b. run `pip install ROUNDS.py` (As soon as pypi is back up)
 
 Or c. download the [latest release](https://github.com/Scyye/ROUNDS.py/releases/latest) and extract it.
 
+Make sure you have [python](https://www.python.org/downloads/release/python-3913/) installed, as well as [dotnet 2.1](https://dotnet.microsoft.com/en-us/download/dotnet/2.1)
+
 Then, create a new python file and import the package:
 ```py
 from ROUNDS.mod import Mod
