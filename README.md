@@ -24,7 +24,7 @@ from ROUNDS.mod import Mod
 ## Example
 To initialise your mod:
 ```py
-from ROUNDS.mod import Mod
+from ROUNDS import Mod
 
 # NOTE: Version must be in the format of "x.x.x" where x is any number (can be multiple digits)
 mod = Mod(name="Your Mod Name", author="Your Name", description="Describe your mod", version="1.0.0")
@@ -32,7 +32,7 @@ mod = Mod(name="Your Mod Name", author="Your Name", description="Describe your m
 
 To add a stat card:
 ```py
-from ROUNDS.card import InfoStat, Stat
+from ROUNDS import InfoStat, Stat
 
 # NOTE: You can add as many cards as you want
 mod.add_card(name="Name", description="What does your card do?", stats=[
