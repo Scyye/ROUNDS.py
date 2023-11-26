@@ -9,9 +9,12 @@ More features coming soon, this is just the first release to get the ball rollin
 
 ## How to use
 Either
-a. run `pip install ROUNDS.py` 
+(RECOMMENDED)
+a. run `git clone https://github.com/Scyye/ROUNDS.py` and create a .py file in the directory it cloned to
 
-Or b. download the [latest release](https://github.com/Scyye/ROUNDS.py/releases/latest) and extract it.
+b. run `pip install ROUNDS.py` (As soon as pypi is back up)
+
+Or c. download the [latest release](https://github.com/Scyye/ROUNDS.py/releases/latest) and extract it.
 
 Then, create a new python file and import the package:
 ```py
