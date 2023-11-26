@@ -9,7 +9,7 @@ More features coming soon, this is just the first release to get the ball rollin
 
 ## How to use
 Either
-a. run `pip install ROUNDS.py` 
+a. run `pip install ROUNDS.py` (As soon as pypi is back up)
 
 Or b. download the [latest release](https://github.com/Scyye/ROUNDS.py/releases/latest) and extract it.
 
