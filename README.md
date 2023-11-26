@@ -10,7 +10,7 @@ More features coming soon, this is just the first release to get the ball rollin
 ## How to use
 run `git clone https://github.com/Scyye/ROUNDS.py` and create a .py file in the directory it cloned to
 
-Make sure you have [python](https://www.python.org/downloads/release/python-3913/) installed, as well as [dotnet 2.1](https://dotnet.microsoft.com/en-us/download/dotnet/2.1)
+Make sure you have [python](https://www.python.org/downloads/release/python-3913/) installed, as well as [dotnet 6.0](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
 Then, create a new python file and import the package:
 ```py
