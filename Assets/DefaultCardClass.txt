@@ -1,0 +1,34 @@
+public class +TITLE_CLASS+ : SimpleCard
+{
+    public override CardDetails Details => new CardDetails
+    {
+        Title       = "+TITLE+",
+        Description = "+DESC+",
+        ModName     = Main.ModInitials,
+        Rarity      = RarityUtils.GetRarity("Common"),
+        Theme       = CardThemeColor.CardThemeColorType.TechWhite,
+        // Art         = DeckSmithUtil.Instance.GetArtFromUrl("https://placehold.co/512x512/png"),
+        Stats = new CardInfoStat[]
+        {
+            +STATS+
+        }
+    };
+
+    public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
+    {
+        Dictionary<string, Action<float>> actions = new Dictionary<string, Action<float>>
+        {
+            { "Damage",                (val) => { gun.damage = val;  } },
+            { "Health",                (val) => { statModifiers.health = val; } },
+            { "Reload Time",           (val) => { gun.reloadTime = val; } },
+            { "Ammunition",            (val) => { gun.ammo = (int)val; } },
+            { "Projectile Count",      (val) => { gun.numberOfProjectiles = Mathf.Max(1, (int)val); } },
+            { "Bursts",                (val) => { gun.bursts = (int)val; } },
+            { "Time Between Bullets",  (val) => { gun.timeBetweenBullets = val; } },
+            { "ATKSPD",                (val) => { gun.attackSpeed = val; } },
+            { "Bounces",               (val) => { gun.reflects = (int)val; } },
+            { "Bullet Speed",          (val) => { gun.projectileSpeed = val; } }
+        };
+        +ACTIONS+
+    }
+}

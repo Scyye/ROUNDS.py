@@ -1,0 +1,13 @@
+{
+    "name": "+MODNAME+",
+    "version_number": "+VERSION+",
+    "website_url": "https://github.com/Scyye/ROUNDS.py",
+    "description": "+DESC+",
+    "dependencies": [
+        "willis81808-UnboundLib-3.2.12",
+        "Pykess-ModdingUtils-0.4.8",
+        "Pykess-CardChoiceSpawnUniqueCardPatch-0.1.9",
+        "willis81808-ModsPlus-1.6.2",
+        "Root-RarityLib-1.2.8"
+    ]
+}
