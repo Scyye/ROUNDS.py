@@ -33,9 +33,9 @@ from ROUNDS.card import InfoStat, Stat
 
 # NOTE: You can add as many cards as you want
 mod.add_card(name="Name", description="What does your card do?", stats=[
-    InfoStat(stat=Stat.Health, value=1.5), # Health is multiplied by 1.5
-    InfoStat(stat=Stat.Damage, value=0.5), # Damage is multiplied by 0.5
-    InfoStat(stat=Stat.Ammo, value=2) # Ammo is incremented (increased) by 2
+    InfoStat(stat=Stat.Health, value=1.5, positive=True), # Health is multiplied by 1.5
+    InfoStat(stat=Stat.Damage, value=0.5, positive=False), # Damage is multiplied by 0.5
+    InfoStat(stat=Stat.Ammo, value=2, positive=True) # Ammo is incremented (increased) by 2
 ])
 ```
 

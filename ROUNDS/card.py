@@ -28,15 +28,16 @@ mult = [
 
 
 class InfoStat:
-    def __init__(self, stat: Stat, value: float):
+    def __init__(self, stat: Stat, value: float, positive: bool):
         self.stat = stat
         self.value = value
+        self.positive = positive
 
     def __str__(self):
         return \
             f"""new CardInfoStat()
             {{
-                positive = {str((self.value > 0 and self.stat not in mult) or (self.value > 1 and self.stat in mult)).lower()},
+                positive = {str(self.positive).lower()},
                 stat = "{self.stat.value}",
                 amount = "{"+" if self.stat not in mult else ""}{self.value if self.stat not in mult else self.value * 100}{"%" if self.stat in mult else ""}",
                 simepleAmount = CardInfoStat.SimpleAmount.notAssigned
